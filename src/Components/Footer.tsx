@@ -12,7 +12,7 @@ export const DivFooter = (props: PropsFooter) => {
 
   return (
     <StylesFooter>
-      <h2>Footer of my project</h2>
+      <footer>Footer of my project</footer>
 
     </StylesFooter>
   );

@@ -1,3 +1,5 @@
+
+import Form from 'react-bootstrap/Form';
 import { StylesHeader } from "./Header.css";
 
 
@@ -14,6 +16,14 @@ export const DivHeader = (props: PropsHeader) => {
     <StylesHeader>
       <h2>MIS FAQ</h2><br/>
       <h1>Perguntas frequentes</h1>
+
+
+      <Form className='formHeader'>
+        <Form.Group className="formHeaderGroup" controlId="controlInputGroup">
+          <Form.Control type="text" placeholder="Adicione uma nova FAQ" />
+        </Form.Group>        
+      </Form>
+      
     </StylesHeader>
   );
 }
