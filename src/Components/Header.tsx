@@ -12,8 +12,8 @@ export const DivHeader = (props: PropsHeader) => {
   console.log(props.title);
   return (
     <StylesHeader>
-      <h1>MIS FAQ</h1>
-
+      <h2>MIS FAQ</h2><br/>
+      <h1>Perguntas frequentes</h1>
     </StylesHeader>
   );
 }

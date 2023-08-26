@@ -2,17 +2,20 @@ import styled from "styled-components";
 
 export const StylesHeader = styled.div`
   border: solid 1px #000;
-  background: #000;
+  background: var(--primary);
   width: 100%;
-  height: 5rem;
+  height: 10rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.2rem;
     color: #fff;
     background: none;
-    margin: 1rem;
+    font-weight: 400;
+  }
+  h2 {
   }
 `;
