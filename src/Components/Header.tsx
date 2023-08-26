@@ -1,5 +1,6 @@
 
 import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 import { StylesHeader } from "./Header.css";
 
 
@@ -22,6 +23,7 @@ export const DivHeader = (props: PropsHeader) => {
         <Form.Group className="formHeaderGroup" controlId="controlInputGroup">
           <Form.Control type="text" placeholder="Adicione uma nova FAQ" />
         </Form.Group>        
+        <Button variant="primary">Criar</Button>
       </Form>
       
     </StylesHeader>

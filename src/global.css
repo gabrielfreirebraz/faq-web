@@ -2,6 +2,16 @@
 :root {
   --primary: #451C5D;
   --secondary: #670697;
+  --secondary-2:#784F9D;
+  --secondary-3:#9D75B1;
+}
+.btn-primary {
+  background: var(--primary);
+  border: solid var(--primary);
+}
+.btn-primary:hover {
+  background: var(--secondary-2);
+  border: solid var(--secondary-2);
 }
 
 * {

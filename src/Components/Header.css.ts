@@ -20,24 +20,37 @@ export const StylesHeader = styled.div`
   }
 
   .formHeader {
+    background: transparent;
     border-radius: 0.4rem;
     margin: 2rem;
     margin-bottom: -3.5rem;
-    width: 35rem;
     z-index: 1;
+    display: flex;
+    gap: 0.4rem;
+    align-items: stretch;
+    justify-content: stretch;
   }
-  .formHeader input,
-  .formHeader input:focus {
+  .formHeader input[type="text"] {
     border-radius: 0.4rem;
-    padding: 1rem;
-    outline: none;
-    box-shadow: none;
+    padding: 0.8rem 1rem;
     font-size: 0.9rem;
+    width: 35rem;
   }
   .formHeader .formHeaderGroup {
     background: transparent;
   }
-  .formHeader input:focus {
-    border: solid 1px var(--secondary);
+  .formHeader input[type="text"]:focus {
+    border-color: var(--secondary);
+    outline: none;
+    box-shadow: none;
+  }
+  .formHeader .btn {
+    background: var(--secondary-3);
+    border-color: var(--secondary-3);
+    font-size: 0.9rem;
+  }
+  .formHeader .btn:hover {
+    background: var(--secondary-2);
+    border-color: var(--secondary-2);
   }
 `;
