@@ -1,10 +1,11 @@
+import { DivHeader } from "./Components/Header"
 
 function App() {
 
   return (
     <>
-     
-      <h1>MIS FAQ</h1>
+      <DivHeader title="FAQ"/>
+   
     </>
   )
 }
