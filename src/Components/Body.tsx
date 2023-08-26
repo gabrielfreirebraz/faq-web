@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import {StylesBody} from './Body.css';
+import { DivCard } from './Card';
 
 
 interface PropsBody {
@@ -18,11 +19,15 @@ export const DivBody = (props: PropsBody) => {
     <StylesBody>
       <Container>
         <Row>
-          <Col>
-          
-            {/* <h2>Hello project</h2> */}
-          
+          <Col md={3}></Col>
+          <Col md={6}>
+            <DivCard title=""></DivCard>
+            <DivCard title=""></DivCard>
+            <DivCard title=""></DivCard>
+            <DivCard title=""></DivCard>
+            <DivCard title=""></DivCard>
           </Col>
+          <Col md={3}></Col>
         </Row>
       </Container>
 

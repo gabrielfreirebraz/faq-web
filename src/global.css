@@ -6,7 +6,17 @@
   --secondary-3:#9D75B1;
   --white:#FFFFFF;
   --black:#000000;
+  --gray-light: #f0f2f5;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--gray-light);
+}
+
+/* Bootstrap */
 .btn-primary {
   background: var(--primary);
   border: solid var(--primary);
@@ -15,10 +25,9 @@
   background: var(--secondary-2);
   border: solid var(--secondary-2);
 }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background: #f0f2f5;
+.alert-primary {
+  border-color: var(--white);
+  background: var(--secondary-3);
+  color:var(--white);
+  padding: 1rem 3.5rem;
 }

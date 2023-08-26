@@ -34,7 +34,7 @@ export const StylesHeader = styled.div`
     border-radius: 0.4rem;
     padding: 0.8rem 1rem;
     font-size: 0.9rem;
-    width: 35rem;
+    width: 34rem;
   }
   .formHeader .formHeaderGroup {
     background: transparent;
@@ -60,6 +60,5 @@ export const StylesHeader = styled.div`
     color: var(--white);
     background: transparent;
     margin-top: -0.1rem;
-    /* margin-left: 0.4rem; */
   }
 `;
