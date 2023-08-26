@@ -4,6 +4,8 @@
   --secondary: #670697;
   --secondary-2:#784F9D;
   --secondary-3:#9D75B1;
+  --white:#FFFFFF;
+  --black:#000000;
 }
 .btn-primary {
   background: var(--primary);

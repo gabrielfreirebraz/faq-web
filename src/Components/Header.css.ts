@@ -53,4 +53,13 @@ export const StylesHeader = styled.div`
     background: var(--secondary-2);
     border-color: var(--secondary-2);
   }
+  .formHeader .btn svg::before {
+    content: "&nbsp;";
+  }
+  .formHeader .btn svg {
+    color: var(--white);
+    background: transparent;
+    margin-top: -0.1rem;
+    /* margin-left: 0.4rem; */
+  }
 `;
