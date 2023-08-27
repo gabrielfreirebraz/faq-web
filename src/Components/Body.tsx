@@ -13,7 +13,7 @@ const questions = [
   },
   {
     id: 2,
-    title: "Vejo erro de usuário ou senha inválido, mas digitei o login corretamente"
+    title: "Vejo erro de dados inválidos, mas digitei o login corretamente"
   },
   {
     id: 3,

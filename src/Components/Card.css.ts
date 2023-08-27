@@ -7,10 +7,11 @@ export const StylesCard = styled.div`
     align-items: center;
     justify-content: space-between;
   }
-  .alert svg,
+  .alert .bi,
   .alert .form-switch,
   .alert .form-switch .form-check-label {
     background: transparent;
+    cursor: pointer;
   }
   .alert .form-switch .form-check-label {
     font-size: 0.85rem;
