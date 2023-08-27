@@ -16,6 +16,11 @@
   background: var(--gray-light);
 }
 
+.lbl-primary {
+  color:var(--primary);
+  font-size: .85rem;
+}
+
 /* Bootstrap */
 .btn-primary {
   background: var(--primary);
@@ -30,4 +35,8 @@
   background: var(--secondary-3);
   color:var(--white);
   padding: 1rem 3.5rem;
+}
+.bg-primary {
+  background: var(--primary) !important;
+  color:var(--white);
 }

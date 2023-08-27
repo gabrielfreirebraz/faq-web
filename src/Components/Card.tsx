@@ -1,28 +1,39 @@
 import Alert from 'react-bootstrap/Alert';
 import Form from 'react-bootstrap/Form';
 import {StylesCard} from './Card.css';
+import { useState } from 'react';
 
 
 interface PropsCard {
   id: number,
-  title: string
+  title: string,
+  complete: boolean
 }
 
 export const DivCard = (props: PropsCard) => {
 
   console.log("key is "+props.id);
 
+  const [isCompleteCurrent, setIsCompleteCurrent] = useState(props.complete);
+
+  async function handleCheckComplete() {
+
+    console.log("changed for "+!isCompleteCurrent);
+    setIsCompleteCurrent(!isCompleteCurrent);
+  }
+
   return (
     <StylesCard>
 
           
-      <Alert key={props.id} variant="primary">
+      <Alert variant="primary">
       
           <Form.Check 
-          
+            checked={isCompleteCurrent}
             type="switch"
             id={`switch-${props.id}`}
             label={props.title}
+            onChange={handleCheckComplete}
           />
 
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" className="bi bi-trash3" viewBox="0 0 16 16">
