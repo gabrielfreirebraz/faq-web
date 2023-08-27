@@ -13,7 +13,7 @@ export const StylesCard = styled.div`
     background: transparent;
   }
   .alert .form-switch .form-check-label {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
   input[id^="switch"] {
     box-shadow: none;
