@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <DivHeader title="MIS FAQ"/>
-      <DivBody title="Body here"/>
+      <DivBody/>
       <DivFooter title="Footer here" />
     </>
   )

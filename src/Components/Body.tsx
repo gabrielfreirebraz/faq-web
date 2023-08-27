@@ -6,14 +6,37 @@ import {StylesBody} from './Body.css';
 import { DivCard } from './Card';
 
 
-interface PropsBody {
-  title: string
-}
+const questions = [
+  {
+    id: 1,
+    title: "Como saber se tenho acesso ao Portal MIS"
+  },
+  {
+    id: 2,
+    title: "Vejo erro de usuário ou senha inválido, mas digitei o login corretamente"
+  },
+  {
+    id: 3,
+    title: "Como saber se meu login de rede está bloqueado"
+  },
+  {
+    id: 4,
+    title: "Como prosseguir com o login no Portal MIS após resetar a senha de rede"
+  },
+  {
+    id: 5,
+    title: "Quais os principais erros do AD ao logar na rede"
+  },
+  {
+    id: 6,
+    title: "O problema persiste e não consigo autenticar no Portal MIS"
+  }
+]
 
 
-export const DivBody = (props: PropsBody) => {
 
-  console.log(props.title);
+export const DivBody = () => {
+
 
   return (
     <StylesBody>
@@ -21,12 +44,7 @@ export const DivBody = (props: PropsBody) => {
         <Row>
           <Col md={3}></Col>
           <Col md={6}>
-            <DivCard title="Como saber se tenho acesso ao Portal MIS" id={1}></DivCard>
-            <DivCard title="Vejo erro de usuário ou senha inválido, mas digitei o login corretamente" id={2}></DivCard>
-            <DivCard title="Como saber se meu login de rede está bloqueado" id={3}></DivCard>
-            <DivCard title="Como prosseguir com o login no Portal MIS após resetar a senha de rede" id={4}></DivCard>
-            <DivCard title="Quais os principais erros do AD ao logar na rede" id={5}></DivCard>
-            <DivCard title="O problema persiste e não consigo autenticar no Portal MIS" id={5}></DivCard>
+            {questions.map(v => <DivCard title={v.title} id={v.id}></DivCard>)}            
           </Col>
           <Col md={3}></Col>
         </Row>

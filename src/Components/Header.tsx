@@ -12,16 +12,16 @@ interface PropsHeader {
 
 export const DivHeader = (props: PropsHeader) => {
 
-  console.log(props.title);
+  
   return (
     <StylesHeader>
-      <h2>MIS FAQ</h2><br/>
+      <h2>{props.title}</h2><br/>
       <h1>Perguntas frequentes</h1>
 
 
       <Form className='formHeader'>
         <Form.Group className="formHeaderGroup" controlId="controlInputGroup">
-          <Form.Control type="text" placeholder="Adicione uma nova FAQ" />
+          <Form.Control type="text" placeholder="Adicione uma nova FAQ" autoFocus />
         </Form.Group>        
         <Button variant="primary">Criar&nbsp;&nbsp;
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" className="bi bi-plus-circle" viewBox="0 0 16 16">
