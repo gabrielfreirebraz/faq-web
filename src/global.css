@@ -19,6 +19,8 @@
 .lbl-primary {
   color:var(--primary);
   font-size: .85rem;
+  font-weight: 600;
+  margin: .85rem 0;
 }
 
 /* Bootstrap */
@@ -37,6 +39,7 @@
   padding: 1rem 3.5rem;
 }
 .bg-primary {
-  background: var(--primary) !important;
+  background: var(--secondary-2) !important;
   color:var(--white);
+  margin: auto .25rem;
 }

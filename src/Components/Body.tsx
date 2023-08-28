@@ -18,7 +18,7 @@ const questions = [
   },
   {
     id: 2,
-    title: "Vejo erro de dados inválidos, mas digitei o login corretamente",
+    title: "Vejo erro de dados inválidos e digitei o login corretamente",
     isComplete: false
   },
   {
@@ -60,14 +60,15 @@ export const DivBody = () => {
       <Container>
         <Row>
             <Col md={3}></Col>
-            <Col md={6}>
+            <Col md={6} id="col-counter">
               <label className='lbl-primary'>FAQ's criadas&nbsp;<Badge bg="primary">{faqs.length}</Badge></label>
+              <label className='lbl-primary'>Publicadas&nbsp;<Badge bg="primary">1 de {faqs.length}</Badge></label>
             </Col>
 
             <Col md={3}></Col>
         </Row>
 
-        <Row><Col>&nbsp;</Col></Row>
+        {/* <Row><Col>&nbsp;</Col></Row> */}
 
         <Row>
           <Col md={3}></Col>
