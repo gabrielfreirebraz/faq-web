@@ -40,7 +40,7 @@ export const StylesHeader = styled.div`
     background: transparent;
   }
   .formHeader input[type="text"]:focus {
-    border-color: var(--secondary);
+    border-color: var(--secondary-3);
     outline: none;
     box-shadow: none;
   }
