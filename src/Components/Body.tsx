@@ -5,7 +5,8 @@ import Badge from 'react-bootstrap/Badge';
 
 import { StylesBody } from './Body.css';
 import { DivCard } from './Card';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+
 
 
 
@@ -44,19 +45,23 @@ const questions = [
 ]
 
 
-
 export const DivBody = () => {
 
-  const [faqs] = useState(questions);
-
-  useEffect(() => {
 
 
+  const [faqs, setFaqs] = useState(questions);
 
-  },[])
-
-  async function handleClickTrash() {
+  function deleteCard(id: number) {
     console.log("Trash 1");
+
+    const newQuestions = faqs.filter((card)=>{
+    
+      return card.id !== id; 
+    });
+
+    console.log(newQuestions);
+    setFaqs(newQuestions);
+    
     // destruir componente atual
   }
 
@@ -78,7 +83,7 @@ export const DivBody = () => {
         <Row>
           <Col md={3}></Col>
           <Col md={6}>
-            {questions.map(v => <DivCard onClick={handleClickTrash} key={v.id} title={v.title} id={v.id} complete={v.isComplete}></DivCard>)}            
+            {faqs.map(v => <DivCard onDeleteCard={deleteCard} key={v.id} title={v.title} id={v.id} complete={v.isComplete}></DivCard>)}            
           </Col>
           <Col md={3}></Col>
         </Row>
