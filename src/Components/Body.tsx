@@ -55,6 +55,11 @@ export const DivBody = () => {
 
   },[])
 
+  async function handleClickTrash() {
+    console.log("Trash 1");
+    // destruir componente atual
+  }
+
   return (
     <StylesBody>
       <Container>
@@ -73,7 +78,7 @@ export const DivBody = () => {
         <Row>
           <Col md={3}></Col>
           <Col md={6}>
-            {questions.map(v => <DivCard key={v.id} title={v.title} id={v.id} complete={v.isComplete}></DivCard>)}            
+            {questions.map(v => <DivCard onClick={handleClickTrash} key={v.id} title={v.title} id={v.id} complete={v.isComplete}></DivCard>)}            
           </Col>
           <Col md={3}></Col>
         </Row>
