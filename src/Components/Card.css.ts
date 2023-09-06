@@ -16,11 +16,15 @@ export const StylesCard = styled.div`
   .alert .form-switch .form-check-label {
     font-size: 0.85rem;
   }
-  input[id^="switch"] {
+  .alert input[id^="switch"] {
     box-shadow: none;
   }
-  input[id^="switch"]:checked {
+  .alert input[id^="switch"]:checked {
     background-color: var(--primary);
     border-color: var(--secondary);
+  }
+  .alert a {
+    background: transparent;
+    color: var(--white);
   }
 `;
