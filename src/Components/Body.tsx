@@ -45,24 +45,52 @@ const questions = [
 ]
 
 
+
 export const DivBody = () => {
-
-
-
   const [faqs, setFaqs] = useState(questions);
 
-  function deleteCard(id: number) {
-    console.log("Trash 1");
 
+
+
+/*
+  useEffect(()=>{
+
+
+    const r = t();
+
+    console.log("r: "+r);
+
+  },[faqs])
+*/
+  
+/*
+  const t = ()=>{ 
+    return faqs.reduce(
+    (i,currentCard) => {
+
+      console.log("sum: "+i);
+
+      return i + (currentCard.isComplete ? 1 : 0)
+    },0,);
+  }
+*/
+  function deleteCard(id: number) {
     const newQuestions = faqs.filter((card)=>{
     
       return card.id !== id; 
     });
-
-    console.log(newQuestions);
     setFaqs(newQuestions);
-    
-    // destruir componente atual
+  }
+
+  function changeCard(id: number) {
+
+    const newQuestions = faqs.map((card) => {
+      if (id === card.id)      
+        card.isComplete = !card.isComplete;
+
+      return card;
+    });
+    setFaqs(newQuestions);
   }
 
   return (
@@ -78,12 +106,10 @@ export const DivBody = () => {
             <Col md={3}></Col>
         </Row>
 
-        {/* <Row><Col>&nbsp;</Col></Row> */}
-
         <Row>
           <Col md={3}></Col>
           <Col md={6}>
-            {faqs.map(v => <DivCard onDeleteCard={deleteCard} key={v.id} title={v.title} id={v.id} complete={v.isComplete}></DivCard>)}            
+            {faqs.map(v => <DivCard onDeleteCard={deleteCard} onChangeCard={changeCard} key={v.id} title={v.title} id={v.id} complete={v.isComplete}></DivCard>)}            
           </Col>
           <Col md={3}></Col>
         </Row>

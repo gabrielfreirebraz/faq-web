@@ -1,33 +1,30 @@
 import Alert from 'react-bootstrap/Alert';
 import Form from 'react-bootstrap/Form';
 import {StylesCard} from './Card.css';
-import { useState } from 'react';
+//import { useState } from 'react';
 
 
 interface PropsCard {
   id: number,
   title: string,
   complete: boolean, 
-  onDeleteCard(id: number): void
+  onDeleteCard(id: number): void,
+  onChangeCard(id: number): void
 }
 
 export const DivCard = (props: PropsCard) => {
 
-  console.log("key is "+props.id);
-
-  const [isCompleteCurrent, setIsCompleteCurrent] = useState(props.complete);
+  //const [isCompleteCurrent, setIsCompleteCurrent] = useState(props.complete);
 
   async function handleCheckComplete() {
 
-    console.log("changed for "+!isCompleteCurrent);
-    setIsCompleteCurrent(!isCompleteCurrent);
+    props.onChangeCard(props.id)
+    //setIsCompleteCurrent(!isCompleteCurrent);
   }
 
   async function handleDeleteCard() {
-    console.log(props.id);
     props.onDeleteCard(props.id);
-  }
- 
+  } 
 
   return (
     <StylesCard>
@@ -35,7 +32,8 @@ export const DivCard = (props: PropsCard) => {
       <Alert variant="primary">
       
           <Form.Check 
-            checked={isCompleteCurrent}
+            //checked={isCompleteCurrent}
+            checked={props.complete}
             type="switch"
             id={`switch-${props.id}`}
             label={props.title}
