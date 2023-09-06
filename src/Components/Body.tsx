@@ -5,7 +5,7 @@ import Badge from 'react-bootstrap/Badge';
 
 import { StylesBody } from './Body.css';
 import { DivCard } from './Card';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 
@@ -48,32 +48,33 @@ const questions = [
 
 export const DivBody = () => {
   const [faqs, setFaqs] = useState(questions);
+  const [totalChecks, setTotalChecks] = useState(1);
 
 
 
 
-/*
-  useEffect(()=>{
+  useEffect(() => {
 
+    const t = countChecks();
 
-    const r = t();
+    setTotalChecks(t);
+    console.log("other load and total is: "+totalChecks);
 
-    console.log("r: "+r);
+  },[faqs]);
 
-  },[faqs])
-*/
   
-/*
-  const t = ()=>{ 
+
+  const countChecks = ()=>{ 
     return faqs.reduce(
-    (i,currentCard) => {
+      (i,currentCard) => {
 
       console.log("sum: "+i);
 
-      return i + (currentCard.isComplete ? 1 : 0)
-    },0,);
+      //return i + (currentCard.isComplete ? 1 : 0)
+      return i + (+currentCard.isComplete);
+    }, 0);
   }
-*/
+
   function deleteCard(id: number) {
     const newQuestions = faqs.filter((card)=>{
     
