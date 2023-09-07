@@ -104,7 +104,7 @@ export const DivBody = () => {
 
   return (
     <>
-      <DivHeader title="MIS FAQ" onCreateCard={createCard} />
+      <DivHeader title="FAQ" onCreateCard={createCard} />
 
       <StylesBody>
         <Container>

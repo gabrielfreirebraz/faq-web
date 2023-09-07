@@ -2,7 +2,7 @@
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { StylesHeader } from "./Header.css";
-import { useState } from 'react';
+import { FormEvent, useState } from 'react';
 
 
 
@@ -18,7 +18,8 @@ export const DivHeader = (props: PropsHeader) => {
 
 
 
-  async function handleClickCreate() {
+  async function handleClickCreate(e: FormEvent) {
+    e.preventDefault();
     props.onCreateCard(search);
   }
   
@@ -30,7 +31,7 @@ export const DivHeader = (props: PropsHeader) => {
 
       <Form className='formHeader'>
         <Form.Group className="formHeaderGroup" controlId="controlInputGroup">
-          <Form.Control type="text" placeholder="Adicione uma nova FAQ" autoFocus value={search} onChange={(e) => setTxtSearch(e.target.value)} />
+          <Form.Control type="text" placeholder="Adicione uma nova FAQ" autoFocus value={search} onChange={(e) => setTxtSearch(e.target.value)} onKeyUp={(e)=> (e.key == 'Enter' ? handleClickCreate(e) : null)} />
         </Form.Group>        
         <Button variant="primary" onClick={handleClickCreate}>Criar&nbsp;&nbsp;
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" className="bi bi-plus-circle" viewBox="0 0 16 16">
