@@ -40,7 +40,7 @@ const questions = [
   {
     id: 6,
     title: "O problema persiste e não consigo autenticar no Portal MIS",
-    isComplete: false
+    isComplete: true
   }
 ]
 
@@ -48,32 +48,32 @@ const questions = [
 
 export const DivBody = () => {
   const [faqs, setFaqs] = useState(questions);
-  const [totalChecks, setTotalChecks] = useState(1);
-
-
+  const [totalChecks, setTotalChecks] = useState(0);
 
 
   useEffect(() => {
 
+    const countChecks = ()=>{ 
+      return faqs.reduce(
+        (i,currentCard) => {
+  
+        console.log("sum: "+i);
+  
+        //return i + (currentCard.isComplete ? 1 : 0)
+        return i + (+currentCard.isComplete);
+      }, 0);
+    }
+
     const t = countChecks();
-
     setTotalChecks(t);
-    console.log("other load and total is: "+totalChecks);
-
+  
+    console.log("t: "+t);
+    
   },[faqs]);
 
   
 
-  const countChecks = ()=>{ 
-    return faqs.reduce(
-      (i,currentCard) => {
 
-      console.log("sum: "+i);
-
-      //return i + (currentCard.isComplete ? 1 : 0)
-      return i + (+currentCard.isComplete);
-    }, 0);
-  }
 
   function deleteCard(id: number) {
     const newQuestions = faqs.filter((card)=>{
@@ -101,7 +101,7 @@ export const DivBody = () => {
             <Col md={3}></Col>
             <Col md={6} id="col-counter">
               <label className='lbl-primary'>FAQ's criadas&nbsp;<Badge bg="primary">{faqs.length}</Badge></label>
-              <label className='lbl-primary'>Publicadas&nbsp;<Badge bg="primary">1 de {faqs.length}</Badge></label>
+              <label className='lbl-primary'>Publicadas&nbsp;<Badge bg="primary">{totalChecks} de {faqs.length}</Badge></label>
             </Col>
 
             <Col md={3}></Col>
