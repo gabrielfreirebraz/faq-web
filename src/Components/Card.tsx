@@ -5,11 +5,11 @@ import {StylesCard} from './Card.css';
 
 
 interface PropsCard {
-  id: number,
+  id: string,
   title: string,
   complete: boolean, 
-  onDeleteCard(id: number): void,
-  onChangeCard(id: number): void
+  onDeleteCard(id: string): void,
+  onChangeCard(id: string): void
 }
 
 export const DivCard = (props: PropsCard) => {
