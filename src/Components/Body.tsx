@@ -16,7 +16,7 @@ import { DivHeader } from './Header';
 const questions = [
   {
     id: uuidv4(),
-    title: "Como saber se tenho acesso ao Portal MIS",
+    title: "Como saber se tenho acesso ao sistema",
     isComplete: false
   },
   {
@@ -26,22 +26,22 @@ const questions = [
   },
   {
     id: uuidv4(),
-    title: "Como saber se meu login de rede está bloqueado",
+    title: "Como saber se meu login está bloqueado",
     isComplete: false
   },
   {
     id: uuidv4(),
-    title: "Como prosseguir com o login no Portal MIS após resetar a senha de rede",
+    title: "Como prosseguir com o login após resetar a senha",
     isComplete: true
   },
   {
     id: uuidv4(),
-    title: "Quais os principais erros do AD ao logar na rede",
+    title: "Quais os principais erros da ferramenta e como resolvê-los",
     isComplete: false
   },
   {
     id: uuidv4(),
-    title: "O problema persiste e não consigo autenticar no Portal MIS",
+    title: "Nenhuma das respostas resolveu o meu problema",
     isComplete: true
   }
 ]
