@@ -1,4 +1,4 @@
-# React + TypeScript + Vite
+# FAQ page
 
 This template provides a minimal setup to get FAQ page for applications in general working in ReactJS.
 
@@ -8,6 +8,6 @@ Currently, there is a initial web version available:
 
 ## Technologies
 
-- ReactJS + ViteJS + Vercel
+- ReactJS + Typescript + ViteJS + Vercel
 
 
